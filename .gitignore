@@ -4,6 +4,9 @@
 # Log file
 *.log
 
+# Checkstyle
+*.checkstyle
+
 # Package Files #
 *.war
 *.ear
