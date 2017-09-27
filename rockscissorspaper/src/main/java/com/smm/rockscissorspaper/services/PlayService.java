@@ -42,6 +42,7 @@ public class PlayService implements IRockScissorsPaperService {
    * @return A Response for the Request.
    * @throws RockScissorsPaperException When an error occurs.
    */
+  @Override
   public IResponse processRequest(final IRequest request,
       final String operationType) throws RockScissorsPaperException {
     validateRequest(request);
@@ -53,6 +54,7 @@ public class PlayService implements IRockScissorsPaperService {
    * @param request The incoming Request.
    * @throws RockScissorsPaperException When an error occurs.
    */
+  @Override
   public void validateRequest(final IRequest request)
       throws RockScissorsPaperException {
     // Add Validations for the input request (if needed).
@@ -65,6 +67,7 @@ public class PlayService implements IRockScissorsPaperService {
    * @return A Response for the Request.
    * @throws RockScissorsPaperException When an error occurs.
    */
+  @Override
   public IResponse performOperations(final IRequest request,
       final String operationType) throws RockScissorsPaperException {
     Game playedGame = new Game();
@@ -93,7 +96,7 @@ public class PlayService implements IRockScissorsPaperService {
     Integer[] results = {0, 0, 0};
 
     for (int games = 0; games < gamesToPlay; games++) {
-      results[((Integer) RND.nextInt(results.length)).compareTo(1) + 1] += 1;
+      results[Integer.compare(RND.nextInt(results.length), 1) + 1] += 1;
     }
 
     return results;

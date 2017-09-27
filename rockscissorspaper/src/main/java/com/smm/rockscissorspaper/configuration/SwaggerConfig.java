@@ -26,7 +26,7 @@ public class SwaggerConfig {
    * The Spring Environment.
    */
   @Autowired
-  private Environment env;
+  private Environment environment;
 
   /**
    * Creates a Docket for the Swagger UI.
@@ -50,10 +50,10 @@ public class SwaggerConfig {
    *         RockScissorsPaper.properties.
    */
   private ApiInfo apiInfo() {
-    return new ApiInfoBuilder().title(env.getProperty("api.title"))
-        .description(env.getProperty("api.description"))
-        .license(env.getProperty("api.repo.name"))
-        .licenseUrl(env.getProperty("api.repo.url"))
-        .version(env.getProperty("api.version")).build();
+    return new ApiInfoBuilder().title(environment.getProperty("api.title"))
+        .description(environment.getProperty("api.description"))
+        .license(environment.getProperty("api.repo.name"))
+        .licenseUrl(environment.getProperty("api.repo.url"))
+        .version(environment.getProperty("api.version")).build();
   }
 }
