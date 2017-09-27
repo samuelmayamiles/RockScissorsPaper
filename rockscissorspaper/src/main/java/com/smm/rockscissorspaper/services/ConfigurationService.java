@@ -22,6 +22,7 @@ public class ConfigurationService implements IRockScissorsPaperService {
    * @return A Response for the Request.
    * @throws RockScissorsPaperException When an error occurs.
    */
+  @Override
   public IResponse processRequest(final IRequest request,
       final String operationType) throws RockScissorsPaperException {
     validateRequest(request);
@@ -33,6 +34,7 @@ public class ConfigurationService implements IRockScissorsPaperService {
    * @param request The incoming Request.
    * @throws RockScissorsPaperException When an error occurs.
    */
+  @Override
   public void validateRequest(final IRequest request)
       throws RockScissorsPaperException {
     ConfigurationRequest configurationRequest = (ConfigurationRequest) request;
@@ -62,13 +64,14 @@ public class ConfigurationService implements IRockScissorsPaperService {
    * @return A Response for the Request.
    * @throws RockScissorsPaperException When an error occurs.
    */
+  @Override
   public IResponse performOperations(final IRequest request,
       final String operationType) throws RockScissorsPaperException {
     ConfigurationRequest configurationRequest = (ConfigurationRequest) request;
     String propertyName = configurationRequest.getPropertyName().toLowerCase();
 
     switch (propertyName) {
-      case "rounds":
+      case RockScissorsPaperConstants.PROPERTY_ROUNDS:
         PlayService.setGamesToPlay(configurationRequest.getPropertyValue());
         break;
       default:

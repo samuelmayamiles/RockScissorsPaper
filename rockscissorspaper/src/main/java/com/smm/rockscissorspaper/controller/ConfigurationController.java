@@ -42,23 +42,14 @@ public class ConfigurationController extends AbstractController {
    * @param request The Configuration Request.
    * @return A Configuration Response.
    */
-  @RequestMapping(
-      method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-  @ApiOperation(
-      value = "Change property value.")
-  @ApiResponses(
-      value = {
-          @ApiResponse(
-              code = 200, message = "Value changed succesfully.",
-              response = ConfigurationResponse.class),
-          @ApiResponse(
-              code = 400, message = "Bad Request parameters.",
-              response = ErrorResponse.class),
-          @ApiResponse(
-              code = 500, message = "Internal Server Error",
-              response = ErrorResponse.class)})
-  public ResponseEntity<IResponse> handleRequest(
-      @RequestBody @Valid final ConfigurationRequest request) {
+  @RequestMapping(method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+  @ApiOperation(value = "Change property value.")
+  @ApiResponses(value = {
+      @ApiResponse(code = 200, message = "Value changed succesfully.", response = ConfigurationResponse.class),
+      @ApiResponse(code = 400, message = "Bad Request parameters.", response = ErrorResponse.class) })
+  public
+      ResponseEntity<IResponse> handleRequest(
+          @RequestBody @Valid final ConfigurationRequest request) {
 
     try {
       return new ResponseEntity<IResponse>(configurationService.processRequest(

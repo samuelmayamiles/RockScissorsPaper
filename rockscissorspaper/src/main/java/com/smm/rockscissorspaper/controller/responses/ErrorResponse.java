@@ -61,8 +61,6 @@ public class ErrorResponse implements IResponse {
     switch (errorCode) {
       case 400:
         return HttpStatus.BAD_REQUEST;
-      case 404:
-        return HttpStatus.NOT_FOUND;
       default:
         return HttpStatus.INTERNAL_SERVER_ERROR;
     }
