@@ -17,12 +17,7 @@ public abstract class RockScissorsPaperConstants {
   public static final Integer CODE_400_VALUE = 400;
 
   /**
-   * Error 404.
+   * Property for Rounds.
    */
-  public static final Integer CODE_404_VALUE = 404;
-
-  /**
-   * Error 500.
-   */
-  public static final Integer CODE_500_VALUE = 500;
+  public static final String PROPERTY_ROUNDS = "rounds";
 }

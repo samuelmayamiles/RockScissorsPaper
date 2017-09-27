@@ -4,7 +4,7 @@
 
 	<groupId>com.smm</groupId>
 	<artifactId>rockscissorspaper</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.1</version>
 	<name>rockscissorspaper</name>
 	<description>API Technical Exercise</description>
 
@@ -42,6 +42,7 @@
 			<version>${swagger.version}</version>
 			<scope>compile</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
@@ -59,6 +60,12 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
+		</dependency>
+
+		<!-- Mockito -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
 		</dependency>
 	</dependencies>
 
