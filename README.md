@@ -23,11 +23,11 @@ Technical requirements:
 - Download the jar file.
 - Execute using java jar command:
 ```
-java -jar rockscissorspaper-1.1.1.jar
+java -jar rockscissorspaper-1.1.2-SNAPSHOT.jar
 ```
 - By default, jar file runs on port 8080. To change this, just add "--server.port=[PORT_NUMBER]"
 ```
-java -jar rockscissorspaper-1.1.1.jar --server.port=8090
+java -jar rockscissorspaper-1.1.2-SNAPSHOT.jar --server.port=8090
 ```
 - Once running, API documentation should be available from any browser:
 ```
